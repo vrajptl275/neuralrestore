@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model weights (large binary files)
+weights/*.pth
+
+# Output files
+outputs/*.png
+outputs/*.jpg
+outputs/*.jpeg
+
+# Data (too large for git)
+data/original/
+data/dataset/
+data/samples/*.png
+
+# Misc
+*.log
+.ipynb_checkpoints/
