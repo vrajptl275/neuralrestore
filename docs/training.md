@@ -15,6 +15,25 @@ The models are trained using synthetic damage overlayed on clean high-resolution
 | **Model 3** | Denoising | 6,320 | 790 | 790 | 7,900 |
 | **Model 4** | Deblurring | 6,320 | 790 | 790 | 7,900 |
 
+### 📥 Downloading the Dataset from Kaggle
+
+The complete dataset is published on Kaggle: [vgp275/neuralrestore](https://www.kaggle.com/datasets/vgp275/neuralrestore).
+
+To download the dataset using `kagglehub`:
+
+```python
+import kagglehub
+
+# Download latest version into local cache
+path = kagglehub.dataset_download("vgp275/neuralrestore")
+print("Path to dataset files:", path)
+```
+
+Or via Kaggle CLI:
+```bash
+kaggle datasets download -d vgp275/neuralrestore --unzip -p data/dataset
+```
+
 ---
 
 ## ⚙️ Model Training Configurations

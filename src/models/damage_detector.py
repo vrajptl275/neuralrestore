@@ -57,8 +57,11 @@ class MultiTaskDamageDetector(nn.Module):
         )
 
     def forward(self, x):
-        features     = self.unet.encoder(x)
-        decoder_out  = self.unet.decoder(*features)
+        features = self.unet.encoder(x)
+        try:
+            decoder_out = self.unet.decoder(*features)
+        except TypeError:
+            decoder_out = self.unet.decoder(features)
         mask_logits  = self.unet.segmentation_head(decoder_out)
         label_logits = self.label_head(features[-1])
         return mask_logits, label_logits

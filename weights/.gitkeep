@@ -1,0 +1,2 @@
+# This directory stores pre-trained model weights (.pth files).
+# Run `python download_weights.py` to download them from HuggingFace.

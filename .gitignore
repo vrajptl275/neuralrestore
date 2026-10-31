@@ -1,4 +1,8 @@
-# Python
+# ═══════════════════════════════════════════════════════
+# NeuralRestore — .gitignore
+# ═══════════════════════════════════════════════════════
+
+# ── Python ─────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *$py.class
@@ -8,36 +12,55 @@ dist/
 build/
 *.egg
 .eggs/
+*.pyo
 
-# Virtual environments
+# ── Virtual Environments ──────────────────────────────
 venv/
 env/
 .env/
+.venv/
+conda-env/
 
-# IDE
+# ── IDE / Editor ──────────────────────────────────────
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+.spyderproject
+.spyproject
+.ropeproject
 
-# OS
+# ── OS Generated ─────────────────────────────────────
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
 Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# Model weights (large binary files)
+# ── Model Weights (large binary files) ───────────────
 weights/*.pth
+weights/.cache/
+!weights/.gitkeep
 
-# Output files
-outputs/*.png
-outputs/*.jpg
-outputs/*.jpeg
+# ── Output Files ─────────────────────────────────────
+outputs/*
+!outputs/.gitkeep
 
-# Data (too large for git)
-data/original/
-data/dataset/
-data/samples/*.png
+# ── Data (too large for git) ─────────────────────────
+data/
 
-# Misc
-*.log
+# ── Jupyter ──────────────────────────────────────────
 .ipynb_checkpoints/
+*.ipynb
+
+# ── Logs & Misc ──────────────────────────────────────
+*.log
+*.tmp
+*.bak
+
+# ── Antigravity / Gemini ─────────────────────────────
+.kilo/
